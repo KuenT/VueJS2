@@ -32,7 +32,7 @@ new Vue({
         updateXY: function (event) {
             this.x = event.offsetX;
             this.y = event.offsetY;
-        }  
+        }
     }
 });
 
@@ -43,10 +43,10 @@ new Vue({
         age: ''
     },
     methods: {
-        logName: function(){
+        logName: function () {
             console.log('You entered your name');
         },
-        logAge: function(){
+        logAge: function () {
             console.log('You entered your age');
         }
     }
@@ -55,18 +55,38 @@ new Vue({
 new Vue({
     el: 'dynamicCSS',
     data: {
-        available: false,
-        nearby: false
+        available: true,
+        nearby: true
     },
-    methods : {
+    methods: {
 
     },
     computed: {
-        compClasses: function(){
+        compClasses: function () {
             return {
                 available: this.available,
                 nearby: this.nearby
             }
-        } 
+        }
+    }
+});
+
+new Vue({
+    el: '#conditions',
+    data: {
+        error: true,
+        success: true
+    }
+});
+
+new Vue({
+    el: '#loop',
+    data: {
+        characters: ['Mario', 'Luigi', 'Yoshi', 'Bowser'],
+        ninjas: [
+            { name: 'Ryu', age: 25 },
+            { name: 'Yoshi', age: 35 },
+            { name: 'Ken', age: 55 }
+        ]
     }
 })
