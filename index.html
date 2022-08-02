@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <title>VueJS 2</title>
+    <link href="style.css" rel="stylesheet" />
+    <script src="https://cdn.jsdelivr.net/npm/vue@2.6.14/dist/vue.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/vue@2.6.14"></script>
+</head>
+
+<body>
+    <div id="vue-app">
+        <h1>{{ greet("13h00") }}</h1>
+        <h2>Name: {{name}}</h2>
+        <h2>Job: {{job}}</h2>
+        <h1>Data Binding</h1>
+        <h2><a v-bind:href="website">Google</a></h2>
+        <input type="text" v-bind:value="name" />
+        <p v-html="websiteTag"></p>
+        <h1>Events</h1>
+        <button v-on:click="add(1)">Ajouter un an</button>
+        <button v-on:click="substract(1)">Retirer un an</button>
+        <button v-on:click="add(10)">Ajouter 10</button>
+        <button v-on:click="substract(10)">Retirer 10</button>
+        <p>{{age}}</p>
+    </div>
+
+    <div id="canvas" v-on:mousemove="updateXY">{{ x }}, {{ y }}</div>
+    
+    <div id="logging">
+        <h1>Keyboard Events</h1>
+        <label>Name:</label>
+        <input type="text" v-model="name" />
+        <span>{{name}}</span><br>
+        <label>Age:</label>
+        <input type="text" v-model="age" />
+        <span>{{age}}</span><br>
+    </div>
+    <script src="app.js"></script>
+</body>
+
+</html>
