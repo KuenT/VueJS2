@@ -50,4 +50,23 @@ new Vue({
             console.log('You entered your age');
         }
     }
+});
+
+new Vue({
+    el: 'dynamicCSS',
+    data: {
+        available: false,
+        nearby: false
+    },
+    methods : {
+
+    },
+    computed: {
+        compClasses: function(){
+            return {
+                available: this.available,
+                nearby: this.nearby
+            }
+        } 
+    }
 })
