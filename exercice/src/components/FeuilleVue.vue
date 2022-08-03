@@ -1,15 +1,11 @@
 <template>
-  <div>
-  <Arbre></Arbre>
-  </div>
+  
 </template>
 
 <script>
-import Arbre from './Arbre.vue'
+
 export default {
-    components: {
-        Arbre 
-    },
+    props: ['feuilles'],
     data() {
         return {
             feuilles: [
